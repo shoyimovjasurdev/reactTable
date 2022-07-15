@@ -111,8 +111,8 @@ export default class App extends Component {
                   <td>{i.Position}</td>
                   <td>{i.Contak}</td>
                   <td className='my-2'>
-                    <button className="btn  btn-success me-2" onClick={()=>this.editeFun(index)}>Edite</button>
-                    <button className="btn btn-danger " onClick={()=>this.deleteFun(index)}>Delete</button>
+                    <button className="btn  btn-success my-2 me-2" onClick={()=>this.editeFun(index)}>Edite</button>
+                    <button className="btn btn-danger my-2" onClick={()=>this.deleteFun(index)}>Delete</button>
                   </td>
                 </tr>
               )
