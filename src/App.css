@@ -1,0 +1,8 @@
+.inputMain{
+  border-radius: 10px;
+  border-style: none;
+  border-color: #ccc;
+}
+.mainBtn{
+  display: block;
+}

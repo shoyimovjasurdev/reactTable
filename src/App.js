@@ -71,13 +71,23 @@ export default class App extends Component {
 
     return (
       <div className="App container mt-5">
-        <div>
-          <input value={this.state.name} onChange={(val)=>{this.setState({name:val.target.value})}} placeholder="Name" className="me-3"/>
-          <input value={this.state.Last_name} onChange={(val)=>{this.setState({Last_name:val.target.value})}} placeholder="Last name"  className="me-3"/>
-          <input value={this.state.Position} onChange={(val)=>{this.setState({Position:val.target.value})}} placeholder="Position"  className="me-3"/>
-          <input type="number" value={this.state.Contak} onChange={(val)=>{this.setState({Contak:val.target.value})}} placeholder="Contak"  className="me-4"/>
-          <button onClick={()=>this.AddFun()} className="btn btn-primary ms-5" >Add</button>
-          <button onClick={()=>this.Edite()} className="btn btn-success ms-3" >Edite</button>
+        <div className='row'>
+          <div className='col-3'>
+            <input value={this.state.name} onChange={(val)=>{this.setState({name:val.target.value})}} placeholder="Name" className="me-3  inputMain form-control my-2 "/>
+          </div>
+          <div className='col-3'>
+            <input value={this.state.Last_name} onChange={(val)=>{this.setState({Last_name:val.target.value})}} placeholder="Last name"  className="me-3  inputMain form-control my-2 "/>
+          </div >
+          <div className='col-3'>
+            <input value={this.state.Position} onChange={(val)=>{this.setState({Position:val.target.value})}} placeholder="Position"  className="me-3  inputMain form-control my-2 "/>
+          </div>
+          <div className='col-3'> 
+            <input type="number" value={this.state.Contak} onChange={(val)=>{this.setState({Contak:val.target.value})}} placeholder="Contak"  className="me-4  inputMain form-control my-2 "/>
+          </div>
+        </div>
+        <div className='mainBtn mt-2'>
+            <button onClick={()=>this.AddFun()} className="btn btn-primary " >Add</button>
+            <button onClick={()=>this.Edite()} className="btn btn-success ms-4" >Edite</button>
         </div>
       <table className="table mt-2">
         <thead>
@@ -100,9 +110,9 @@ export default class App extends Component {
                   <td>{i.Last_name}</td>
                   <td>{i.Position}</td>
                   <td>{i.Contak}</td>
-                  <td>
+                  <td className='my-2'>
                     <button className="btn  btn-success me-2" onClick={()=>this.editeFun(index)}>Edite</button>
-                    <button className="btn btn-danger" onClick={()=>this.deleteFun(index)}>Delete</button>
+                    <button className="btn btn-danger " onClick={()=>this.deleteFun(index)}>Delete</button>
                   </td>
                 </tr>
               )
